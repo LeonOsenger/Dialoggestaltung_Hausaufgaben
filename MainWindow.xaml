@@ -1,0 +1,167 @@
+﻿<Window x:Class="Dialoggestaltung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dialoggestaltung"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="360" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="140" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        
+        <!--Kunden-Nr.-->
+        <Label 
+            x:Name="LabelKundenNr"
+            Grid.Row="0"
+            Grid.Column="1"
+            Content="Kunden-Nr."
+               HorizontalAlignment="Left"
+            VerticalAlignment="Center"/>
+        <TextBox 
+            x:Name="TBKundenNr"
+            Grid.Row="0"
+            Grid.Column="2"
+            Margin="0,5,10,5"/>
+
+        <!--Name-->
+        <Label
+            x:Name="LabelName"
+            Grid.Row="1"
+            Grid.Column="1"
+            Content="Name"
+               HorizontalAlignment="Left"
+            VerticalAlignment="Center" />
+        <TextBox 
+            x:Name="TBName"
+            Grid.Row="1"
+            Grid.Column="2"
+            Margin="0,5,10,5" />
+
+        <!--Vorname-->
+        <Label
+            x:Name="LabelVorname"
+            Grid.Row="2"
+            Grid.Column="1"
+            Content="Vorname"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center" />
+        <TextBox 
+            x:Name="TBVorname"
+            Grid.Row="2"
+            Grid.Column="2"
+            Margin="0,5,10,5" />
+
+        <!--Altersgruppe-->
+        <Label 
+            x:Name="LabelAlter"
+            Content="Altersgruppe"
+            Grid.Column="1"
+            Grid.Row="3"/>
+        <StackPanel 
+            Grid.Row="3"
+            Grid.Column="2"
+            VerticalAlignment="Center">
+            <RadioButton Content="16-21" />
+            <RadioButton Content="22-35" />
+            <RadioButton Content="36-46" />
+        </StackPanel>
+        
+        <!--ANschrifft Box-->
+        <GroupBox 
+            Header="GroupBox"
+            Grid.Row="4"
+            Grid.Column="1"
+            Grid.ColumnSpan="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+                
+                <!--Anschrifft box Adress-Typ-->
+                <Label 
+                    x:Name="labelAdressTyp"
+                    Content="Adress-Typ:"
+                    Grid.Column="0"
+                    Grid.Row="0"/>
+                <ComboBox 
+                    x:Name="cmbAdressTyp"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Margin="0,5,10,5"
+                    Background="Transparent"/>
+
+                <!--Anschrifft box Strasse-->
+                <Label x:Name="labelStarsse"
+                       Content="Strasse:"
+                       Grid.Column="0"
+                       Grid.Row="1" />
+                <TextBox x:Name="TBStrasse"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Margin="0,5,10,5" />
+
+                <!--Anschrifft box PLZ-->
+                <Label x:Name="labelPLZ"
+                       Content="PLZ:"
+                       Grid.Column="0"
+                       Grid.Row="2" />
+                <TextBox x:Name="TBPLZ"
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         Margin="0,5,10,5" />
+
+                <!--Anschrifft box Ort-->
+                <Label x:Name="labelOrt"
+                       Content="Ort:"
+                       Grid.Column="0"
+                       Grid.Row="3" />
+                <TextBox x:Name="TBOrt"
+                         Grid.Row="3"
+                         Grid.Column="1"
+                         Margin="0,5,10,5" />
+                
+            </Grid>
+        </GroupBox>
+        <!--Buttons--> 
+        <StackPanel
+            x:Name="SatckpanelButtons"
+            HorizontalAlignment="Right"
+            Grid.Column="1"
+            Grid.Row="5"
+            Grid.ColumnSpan="2"
+            Orientation="Horizontal">
+            <Button 
+                x:Name="btnSpeicher" 
+                Content="Speichern"
+                    Margin="5" />
+            
+            <Button x:Name="btnübernehmen"
+                    Content="übernehmen"
+                    Margin="5" />
+
+            <Button x:Name="btnAbbrechen"
+                    Content="Abbrechen"
+                    Margin="5" />
+
+        </StackPanel>
+    </Grid>
+</Window>
